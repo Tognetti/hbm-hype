@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>HBM+</title>
+</head>
+<body>
+    <label for="timeInput">Intervalo de tempo em milisegundos: </label>
+    <input type="text" id="timeInput" name="timeInput">
+    <button onclick="getDataStream()">Começar leitura</button>
+    <div id="data-stream"></div>
+    <script>
+        function getDataStream() {
+            const timeInput = document.getElementById('timeInput').value;
+            const sse = new EventSource(`/data-stream?timeInterval=${timeInput}`);
+            sse.onmessage = function (e) {
+                var div = document.getElementById('data-stream');
+                div.appendChild(document.createTextNode(e.data));
+                div.appendChild(document.createElement('br'));
+            };
+        }
+    </script>
+</body>
+</html>
