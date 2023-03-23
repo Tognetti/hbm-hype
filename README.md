@@ -1,3 +1,5 @@
+## Solução
+
 Desenvolvimento feito utilizando Java e Spring Boot.
 
 Para a construção da API considerei a utilização de WebSockets, que permite uma comunicação bi-direcional entre o 
@@ -20,3 +22,13 @@ sse.onmessage = function (e) {
 ```
 
 ## Utilização do protótipo
+
+Protótipo disponível em https://hbm-hype.up.railway.app
+
+É necessário preencher o intervalo de tempo desejado e então começar a leitura, os resultados recebidos serão exibidos na tela.
+
+## Execução local
+
+Para executar o projeto localmente usando Maven:
+```
+./mvnw spring-boot:run
