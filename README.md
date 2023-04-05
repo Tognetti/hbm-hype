@@ -1,5 +1,7 @@
 ## Solução
 
+[Especificação](Desafio%20Backend%20.pdf)
+
 Desenvolvimento feito utilizando Java e Spring Boot.
 
 Para a construção da API considerei a utilização de WebSockets, que permite uma comunicação bi-direcional entre o 
